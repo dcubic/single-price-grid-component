@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --lighter-cyan: hsl(179, 61%, 48%);   
+    --bright-green: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body, main, h1, p {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto auto;
+    font-size: 16px;
+    font-family: Karla;
+    width: 100vw;
+    height: 870px;
+    background-color: var(--light-gray);
+}
+
+main {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 310px;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em;
+}
+
+h1 {
+    font-size: 1.2em;
+    font-weight: 700
+}
+
+p {
+    font-size: 0.9em;
+}
+
+.heavy-text {
+    font-weight: 700
+}
+
+.small-text {
+    font-size: 0.9em;
+}
+
+.large-line-height {
+    line-height: 1.8em;
+}
+
+.faded-text {
+    opacity: 0.5;
+}
+
+.white-text {
+    color: white;
+}
+
+#sales-pitch-section {
+    background-color: white;
+}
+
+#purchase-section {
+    background-color: var(--cyan);
+}
+
+#purchase-section-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.price {
+    font-size: 2.3em;
+    font-weight: 700;
+}
+
+#full-access-p {
+    transform: translateY(-0.5em)
+}
+
+button {
+    font-family: Karla;
+    font-size: 1.1em;
+    color: white;
+    height: 3em;
+    background-color: var(--bright-green);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+#why-us-section {
+    background-color: var(--lighter-cyan);
+}
+
+.multiline-text {
+    white-space: pre-wrap;
+    line-height: 1.4em;
+    margin-left: -2em;
+}
+
+.cyan-text {
+    color: var(--cyan);
+}
+
+.green-text {
+    color: var(--bright-green)
+}
+
+@media (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+            "sales-pitch sales-pitch"
+            "purchase why-us";
+        width: 100%;
+        max-width: 640px;
+        height: 100%;
+        max-height: 480px;
+    }
+
+    #sales-pitch-section {
+        grid-area: sales-pitch;
+    }
+
+    #purchase-section {
+        grid-area: purchase;
+    }
+
+    #purchase-section-content {
+        transform: translateY(0.5em);
+    }
+
+    #why-us-section {
+        grid-area: why-us;
+    }
+
+    #why-us-text {
+        transform: translateY(0.5em)
+    }
+}
